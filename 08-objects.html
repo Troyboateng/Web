@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Objects</title>
+  </head>
+
+  <body>
+
+    <script>
+      const product = {
+        name : 'socks',
+        price: 1090
+      };
+// nested objects  // object + function = method
+      const product2 = {
+        name: 'shirt', 
+        'delivery-time': '1 day',
+        rating: {
+          stars: 4.5,
+          count: 87
+        },
+
+        fun: function function1() {
+          console.log('function inside object');
+        }
+
+        
+      }
+
+      fun (){
+          console.log('function inside object');
+        }
+
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      product.name = 'cotton socks';
+      console.log(product);
+
+      product.newProperty = true;
+      console.log(product);
+
+      delete product.newProperty;
+      console.log(product);
+
+      // bracket notation
+      console.log(product2['name']);
+      console.log(product2['delivery-time']);
+      console.log(product2.rating.count);
+      product2.fun();
+
+      console.log(typeof console)
+
+    
+      // JSON
+
+      // Converts JavaScript methods to JSON using JSON.stringify()
+      console.log(JSON.stringify(product2));
+
+      // converts JSON back to Javascript using JSON.parse()
+
+      const jsonString = JSON.stringify(product2);
+      console.log(JSON.parse(jsonString));
+      
+
+
+    </script>
+  </body>
+
+</html>
