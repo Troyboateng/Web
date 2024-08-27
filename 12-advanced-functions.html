@@ -7,7 +7,28 @@
 
   <body>
 
+    <button onclick="" class="js-button"> Click </button>
+
     <script>
+
+        /*
+        // Using event listeners and advanced functions
+        const buttonElement = document.querySelector('.js-button');
+
+        const eventListener = () => { 
+            console.log('click');
+        };
+
+        buttonElement.addEventListener('click', eventListener);
+
+        buttonElement.removeEventListener('click', eventListener);
+
+        buttonElement.addEventListener('click', () => {
+            console.log('click2');
+        });
+
+        */
+
         /*
         function greeting(){
             console.log('hello');
@@ -61,6 +82,7 @@
 
          // Another way to loop through an array
 
+         /*
          [
             'make dinner',
             'wash dishes',
@@ -91,7 +113,43 @@
 
             const oneLine = () => 2+3;
             console.log(oneLine());
+
+            const object2 = {
+                method: () => {
+
+                },
+
+                method() {
+
+                }
+            };
+    */
+
+    // Filter out values based on a criteria
+
+    console.log([1, -3, 5].filter((value, index) => {
+
+       /* if(value >= 0){
+            return true;
+        } else {
+        return false;
+        }
+        */
+
+        return value >= 0;
+    }));
+
     
+
+    // Map creates an array from an existing array based on the return value
+
+// 1
+   console.log([1, 1, 3].map((value, index) => {
+        return value + 10;
+    }));
+//2, Code 1 rewritten in the below
+    console.log([1, 1, 3].map((value => value + 10)));
+
 
     </script>
   </body>
